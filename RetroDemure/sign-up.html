@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo/logov2.png" style="width: 80px; height: 80px;" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class='bx bx-menu'></i>
+        </div>
+    </section>
+
+    <div class="login-wrapper">
+        <form action="" class="form">
+            <img src="img/Contact/profile.png" alt="">
+            <h2>Sign Up</h2>
+
+            <div class="input-group">
+                <input type="text" name="signupUser" id="signupUser" autocomplete="off" required>
+                <label for="signupUser">Username</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" name="signupEmail" id="signupEmail" required>
+                <label for="signupEmail">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="signupPassword" id="signupPassword" required>
+                <label for="signupPassword">Password</label>
+            </div>
+
+            <div class="input-groupbd">
+                <input type="date" name="signupBirthDate" id="signupBirthDate" required>
+                <label for="signupBirthDate">Birth Date</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="signupAddress" id="signupAddress" required>
+                <label for="signupAddress">Address</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="signupZip" id="signupZip" required>
+                <label for="signupZip">Zip Code</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="signupCity" id="signupCity" required>
+                <label for="signupCity">City</label>
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="signupCountry" id="signupCountry" required>
+                <label for="signupCountry">Country</label>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" name="signupPhone" id="signupPhone" required>
+                <label for="signupPhone">Phone Number</label>
+            </div>
+
+            <input type="submit" value="Sign Up" class="submit-btn">
+            <a href="login.html" class="forgot-pw">Already have an account? Log in</a>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024, Retro&Demure</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

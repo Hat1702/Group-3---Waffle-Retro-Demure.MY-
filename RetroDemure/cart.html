@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroDemure</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon1.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="img/logo/logov2.png" style="width: 80px; height: 80px;" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag'></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class='bx bx-shopping-bag'></i></a>
+            <i id="bar" class='bx bx-menu'></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#let's_talk</h2>
+        <p>LEAVE A MESSAGE, We love to hear from you!</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price(RM)</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class='bx bx-x-circle' onclick="removeItem(this)"></i></td>
+                    <td><img src="./img/products/f1.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirts</td>
+                    <td>₹2499</td>
+                    <td><input type="number" value="1"></td>
+                    <td>₹2499</td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-x-circle' onclick="removeItem(this)"></i></td>
+                    <td><img src="./img/products/f2.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirts</td>
+                    <td>₹2499</td>
+                    <td><input type="number" value="1"></td>
+                    <td>₹2499</td>
+                </tr>
+                <tr>
+                    <td><i class='bx bx-x-circle' onclick="removeItem(this)"></i></td>
+                    <td><img src="./img/products/f3.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirts</td>
+                    <td>₹2499</td>
+                    <td><input type="number" value="1"></td>
+                    <td>₹2499</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </section>
+
+    <!-- <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div> -->
+
+        <div id="subtotal">
+            <h3>Cart Total</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>₹7399</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>₹7399</strong></td>
+                </tr>
+            </table>
+            <button id="checkout-btn" class="normal">Proceed to checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="/img/logo/logov2.png" style="width: 150px; height: 150px;" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Lot E50, 4th Floor, Sungei Wang Plaza, Jln Sultan Ismail, Bukit Bintang, 50250 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+            <p><strong>Phone:</strong> 03-2112-8888</p>
+            <p><strong>Hours:</strong> 10:00 - 21:00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-instagram'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About us</a>
+            <a href="about.html">Terms & Conditions</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="login.html">Log In</a>
+            <a href="cart.html">View Cart</a>
+        </div>
+        <div class="copyright">
+            <p>© 2024, Retro&Demure</p>
+        </div>
+    </footer>
+
+    <script>
+
+document.getElementById("checkout-btn").addEventListener("click", function() {
+    // Create the popup div
+    let popup = document.createElement("div");
+    popup.id = "popup";
+    popup.style.position = "fixed";
+    popup.style.top = "50%";
+    popup.style.left = "50%";
+    popup.style.transform = "translate(-50%, -50%)";
+    popup.style.backgroundColor = "#4CAF50";
+    popup.style.color = "white";
+    popup.style.padding = "20px";
+    popup.style.borderRadius = "10px";
+    popup.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+    popup.style.fontSize = "18px";
+    popup.innerHTML = "Order Successful";
+
+    // Append the popup to the body
+    document.body.appendChild(popup);
+
+    // Set a timeout to remove the popup and redirect after 5 seconds
+    setTimeout(function() {
+        // Remove the popup
+        popup.remove();
+
+        // Redirect to the homepage (index.html)
+        window.location.href = "index.html";
+    }, 5000); // 5000 milliseconds = 5 seconds
+});
+
+
+        function removeItem(element) {
+    // Traverse up the DOM to find the <tr> element, which is the row to remove
+    let row = element.closest("tr");
+    row.remove();
+
+    // Optionally, update the cart total after removing an item
+    updateCartTotal();
+}
+
+function updateCartTotal() {
+    let total = 0;
+    const rows = document.querySelectorAll("#cart tbody tr");
+
+    // Calculate new total by iterating over each row in the cart
+    rows.forEach(row => {
+        let priceCell = row.querySelector("td:nth-child(4)").textContent; // Get the price of the item
+        let quantityInput = row.querySelector("td:nth-child(5) input").value; // Get the quantity input value
+
+        let price = parseFloat(priceCell.replace("₹", "")); // Convert the price to a number
+        let quantity = parseInt(quantityInput, 10); // Convert the quantity to an integer
+        total += price * quantity; // Add the subtotal of this item to the total
+    });
+
+    // Update the cart subtotal and total display
+    document.querySelector("#subtotal table tr:nth-child(1) td:nth-child(2)").textContent = `₹${total}`;
+    document.querySelector("#subtotal table tr:nth-child(3) td:nth-child(2)").textContent = `₹${total}`;
+}
+
+// Event listener for quantity input changes
+document.querySelectorAll("#cart tbody input[type='number']").forEach(input => {
+    input.addEventListener("input", function() {
+        let row = this.closest("tr"); // Get the row of the item being updated
+        let priceCell = row.querySelector("td:nth-child(4)").textContent; // Get the price of the item
+        let price = parseFloat(priceCell.replace("₹", "")); // Convert the price to a number
+        let quantity = parseInt(this.value, 10); // Get the updated quantity
+
+        // Update the subtotal for the current row
+        let subtotalCell = row.querySelector("td:nth-child(6)"); // Get the cell for the subtotal
+        subtotalCell.textContent = `₹${(price * quantity).toFixed(2)}`; // Update the subtotal for this row
+
+        // Update the cart total after modifying the quantity
+        updateCartTotal();
+    });
+});
+
+
+    </script>
+</body>
+</html>
