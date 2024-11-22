@@ -5,10 +5,4 @@ Sprint 1 Done :>
 
 Sprint 2 week 1 is done :>
 
-
-Sprint 2 week 2 is done :>
-
-The project Complete :>
-
-
-Details: Added Admin Panels, Added The Database and fixing up some of the backends to make sure the functionality of the pages presented works
+Note: We need some more to do which is the finalization of the Sprint 2 week 1 that will be done in the 2nd Week of Sprint 2
